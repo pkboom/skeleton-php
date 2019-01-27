@@ -1,17 +1,17 @@
-Inside Laravel Test
+cd a_package && ./configure-skeleton.sh
+
+Inside Laravel 
         "psr-4": {
-            "Pkboom\\:Package_Name": "packages/pkboom/:package_name/src/",
+            "Pkboom\\:PackageName": "a_packages/src",
             "App\\": "app/"
         }
 
-        Pkboom\:Package_Name\:Package_NameServiceProvider::class,
- 
-cd a_package && ./configure-skeleton.sh
+        Pkboom\:PackageName\:PackageNameServiceProvider::class,
 
 cd .. && composer dump-autoload
 
 
-Outside Laravel Test
+Outside Laravel 
 mv packages ..
 
 composer-link ../packages/pkboom/{package}
