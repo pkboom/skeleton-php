@@ -6,7 +6,7 @@ Inside Laravel Test
 
         Pkboom\:Package_Name\:Package_NameServiceProvider::class,
  
-cd a_package && configure-skeleton.sh
+cd a_package && ./configure-skeleton.sh
 
 cd .. && composer dump-autoload
 
