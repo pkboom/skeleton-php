@@ -1,0 +1,6 @@
+mkdir added linked to packages/pkboom
+
+create a file linked to configure-skeleton
+or
+create a script file that cd packages/pkboom && run configure-skeleton
+
