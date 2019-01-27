@@ -11,11 +11,12 @@ read -p "Author email ($git_email): " author_email
 author_email=${author_email:-$git_email}
 
 # replace all => blanks to ''
+# blank => [:blank:]
 username_guess=${author_name//[[:blank:]]/}
 read -p "Author username ($username_guess): " author_username
 author_username=${author_username:-$username_guess}
 
-current_directory=`pwd`
+current_directory=`pwd -P`
 current_directory=`basename $current_directory`
 read -p "Package name ($current_directory): " package_name
 package_name=${package_name:-$current_directory}

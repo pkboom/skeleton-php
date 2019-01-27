@@ -1,6 +1,9 @@
 mkdir added linked to packages/pkboom
+ln -s packages/pkboom/laravel-helpers-file added
 
 create a file linked to configure-skeleton
 or
 create a script file that cd packages/pkboom && run configure-skeleton
 
+option --without-comment
+generate a file without doc
