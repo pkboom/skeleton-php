@@ -46,13 +46,14 @@ rm -rf .git
 git init
 
 echo
-
+PackageName='Dust'
 # find every file in and below current directory
 # sed no backup, replace more than once, {} filenames from find
 find . -type f -exec sed -i '' -e "s/:author_name/$author_name/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_username/$author_username/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_email/$author_email/" {} \;
 find . -type f -exec sed -i '' -e "s/:package_name/$package_name/" {} \;
+find . -type f -exec sed -i '' -e "s/:PackageName/$PackageName/" {} \;
 find . -type f -exec sed -i '' -e "s/:package_description/$package_description/" {} \;
 
 sed -i '' -e "/^\*\*Note:\*\* Replace/d" README.md
