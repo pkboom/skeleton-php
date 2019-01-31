@@ -7,3 +7,6 @@ create a script file that cd packages/pkboom && run configure-skeleton
 
 option --without-comment
 generate a file without doc
+
+find ! -name '*.html': exclude files
+not all :package_name changed
