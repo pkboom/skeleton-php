@@ -10,3 +10,15 @@ generate a file without doc
 
 find ! -name '*.html': exclude files
 not all :package_name changed
+
+
+fix it
+"extra": {
+        "laravel": {
+            "providers": [
+                "Pkboom\\ImportCvs\\SkeletonServiceProvider"
+            ],
+            "aliases": {
+                "ImportCvs": "Pkboom\\Skeleton\\SkeletonFacade"
+            }
+        }
