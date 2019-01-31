@@ -64,3 +64,5 @@ echo "Replaced all values and reset git directory, self destructing in 3... 2...
 
 # -- => end of command options
 rm -- "$0"
+
+mv src/SkeletonServiceProvider.php src/"$package_namespace.php"
