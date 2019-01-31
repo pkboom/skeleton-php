@@ -1,13 +1,13 @@
 <?php
 
-namespace Pkboom\Skeleton;
+namespace Pkboom\:PackageName;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Pkboom\Skeleton\SkeletonClass
+ * @see \Pkboom\:PackageName\:PackageNameClass
  */
-class SkeletonFacade extends Facade
+class :PackageNameFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class SkeletonFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'skeleton';
+        return ':package_name';
     }
 }

@@ -57,8 +57,7 @@ find . -type f -exec sed -i '' -e "s/:author_email/$author_email/" {} \;
 find . -type f -exec sed -i '' -e "s/:package_name/$package_name/" {} \;
 find . -type f -exec sed -i '' -e "s/:PackageName/$package_namespace/g" {} \;
 find . -type f -exec sed -i '' -e "s/:package_description/$package_description/" {} \;
-
-find ./a_package -type f -exec sed -i '' -e "s/Skeleton/$package_namespace/" {} \;
+find . -type f -exec sed -i '' -e "s/Skeleton/$package_namespace/" {} \;
 
 sed -i '' -e "/^\*\*Note:\*\* Replace/d" README.md
 

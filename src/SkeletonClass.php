@@ -1,11 +1,11 @@
 <?php
 
-namespace Pkboom\Skeleton;
+namespace Pkboom\:PackageName;
 
-class SkeletonClass
+class :PackageNameClass
 {
     /**
-     * Create a new Skeleton Instance.
+     * Create a new :PackageName Instance.
      */
     public function __construct()
     {
