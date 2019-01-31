@@ -2,7 +2,7 @@ cd a_package && ./configure-skeleton.sh
 
 Inside Laravel 
         "psr-4": {
-            "Pkboom\\:PackageName\\": "a_packages/src/",
+            "Pkboom\\:PackageName\\": "a_package/src/",
             "App\\": "app/"
         }
 

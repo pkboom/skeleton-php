@@ -12,11 +12,11 @@ class :PackageNameServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
+            /*
             $this->publishes([
                 __DIR__.'/../config/:package_name.php' => config_path(':package_name.php'),
             ], 'config');
 
-            /*
             $this->loadViewsFrom(__DIR__.'/../resources/views', ':package_name');
 
             $this->publishes([
@@ -31,6 +31,6 @@ class :PackageNameServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', ':package_name');
+        // $this->mergeConfigFrom(__DIR__.'/../config/config.php', ':package_name');
     }
 }
