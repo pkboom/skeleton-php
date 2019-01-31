@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Pkboom\Skeleton\Tests;
 
 use PHPUnit\Framework\TestCase;
 
