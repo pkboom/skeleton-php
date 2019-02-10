@@ -50,20 +50,24 @@ git init
 
 echo
 # find every file in and below current directory
-# sed no backup, replace more than once, {} filenames from find
+# i: no backup file, just replace
+# e: combine multiple commands
+# {}: filenames from find
 find . -type f -exec sed -i '' -e "s/:author_name/$author_name/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_username/$author_username/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_email/$author_email/" {} \;
 find . -type f -exec sed -i '' -e "s/:package_name/$package_name/" {} \;
+# without /g, it will only replace one time in a line.
 find . -type f -exec sed -i '' -e "s/:PackageName/$package_namespace/g" {} \;
 find . -type f -exec sed -i '' -e "s/:package_description/$package_description/" {} \;
-find . -type f -exec sed -i '' -e "s/Skeleton/$package_namespace/" {} \;
+# !: exclude files
+find . -type f ! -name '*.sh' -exec sed -i '' -e "s/Skeleton/$package_namespace/g" {} \;
 
 sed -i '' -e "/^\*\*Note:\*\* Replace/d" README.md
 
 echo "Replaced all values and reset git directory, self destructing in 3... 2... 1..."
 
-# -- => end of command options
+# -- => end of command options, after --, it is usually file names.
 rm -- "$0"
 
 mv src/SkeletonServiceProvider.php src/"${package_namespace}ServiceProvider.php"
