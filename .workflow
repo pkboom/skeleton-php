@@ -10,7 +10,7 @@ Inside Laravel
 
 cd .. && composer dump-autoload
 
-set up your own service provider
+set up package service provider
 
 move files
 

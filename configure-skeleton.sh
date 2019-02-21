@@ -56,8 +56,8 @@ echo
 find . -type f -exec sed -i '' -e "s/:author_name/$author_name/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_username/$author_username/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_email/$author_email/" {} \;
-find . -type f -exec sed -i '' -e "s/:package_name/$package_name/" {} \;
 # without /g, it will only replace one time in a line.
+find . -type f -exec sed -i '' -e "s/:package_name/$package_name/g" {} \;
 find . -type f -exec sed -i '' -e "s/:PackageName/$package_namespace/g" {} \;
 find . -type f -exec sed -i '' -e "s/:package_description/$package_description/" {} \;
 # !: exclude files
