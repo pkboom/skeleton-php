@@ -33,5 +33,12 @@ composer require pkboom/{package}
 when deleting a_package, it will only delete link
 when deleting files, it will actually files in the package folder
 
+git remote remove origin
+
+from package
+git remote add origin git@github.com:pkboom/{{your-package}}
+wip
+git push -u origin master -f
+
 create README.md
 
