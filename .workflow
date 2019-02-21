@@ -21,13 +21,17 @@ run tests from laravel application, not from package
 delete namespace from laravel-application composer.json
 "Pkboom\\{package_namespace}\\": "a_package/src/",
 
+delete from config/app.php 
+Pkboom\Calm\{{Your package}}ServiceProvider::class,
+
 delete a_package
 
 composer-link ../packages/{package}
 
 composer require pkboom/{package}
 
-
-permanently deleted
 when deleting a_package, it will only delete link
 when deleting files, it will actually files in the package folder
+
+create README.md
+

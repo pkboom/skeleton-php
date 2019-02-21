@@ -20,7 +20,7 @@ class :PackageNameServiceProvider extends ServiceProvider
             $this->loadViewsFrom(__DIR__.'/../resources/views', ':package_name');
 
             $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/:package_name'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/:package_name'),
             ], 'views');
 
             $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
