@@ -1,7 +1,7 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/pkboom/laravel-calm.svg?style=flat-square)](https://packagist.org/packages/pkboom/:package_name)
-[![Build Status](https://img.shields.io/travis/pkboom/laravel-calm/master.svg?style=flat-square)](https://travis-ci.org/pkboom/:package_name)
+[![Latest Stable Version](https://poser.pugx.org/pkboom/laravel-calm/v/stable)](https://packagist.org/packages/pkboom/laravel-calm)
+[![Build Status](https://travis-ci.com/pkboom/laravel-calm.svg?branch=master)](https://travis-ci.com/pkboom/laravel-calm)
 
 This is where your description should go. Try and limit it to a paragraph or two.
 
@@ -19,6 +19,8 @@ composer require pkboom/:package_name
 $skeleton = new pkboom\Skeleton();
 echo $skeleton->echoPhrase('Hello, pkboom!');
 ```
+
+## Requirements
 
 ### Testing
 
