@@ -8,6 +8,8 @@ Inside Laravel
 
         Pkboom\:PackageName\:PackageNameServiceProvider::class,
 
+composer install
+cp phpunit.xml.dist phpunit.xml
 cd .. && composer dump-autoload
 
 set up package service provider
