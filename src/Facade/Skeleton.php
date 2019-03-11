@@ -1,6 +1,6 @@
 <?php
 
-namespace Pkboom\:PackageName;
+namespace Pkboom\:PackageName\Facade;
 
 use Illuminate\Support\Facades\Facade;
 

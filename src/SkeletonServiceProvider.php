@@ -29,7 +29,7 @@ class :PackageNameServiceProvider extends ServiceProvider
         //     ]);
         // }
         // $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
+        // $this->loadRoutesFrom(__DIR__.'/web.php');
         // $this->publishes([
         //     __DIR__.'/path/to/views' => resource_path('views/vendor/courier'),
         // Blade::directive('some', function () {
