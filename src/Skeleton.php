@@ -2,7 +2,7 @@
 
 namespace Pkboom\:PackageName;
 
-class :PackageNameClass
+class :PackageName
 {
     /**
      * Create a new :PackageName Instance.
