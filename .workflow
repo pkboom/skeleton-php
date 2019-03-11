@@ -26,6 +26,7 @@ delete namespace from laravel-application composer.json
 delete from config/app.php 
 Pkboom\Calm\{{Your package}}ServiceProvider::class,
 
+delete phpunit.xml
 delete a_package
 
 composer-link ../packages/{package}

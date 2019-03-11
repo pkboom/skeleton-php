@@ -7,6 +7,18 @@ use Illuminate\Support\ServiceProvider;
 class :PackageNameServiceProvider extends ServiceProvider
 {
     /**
+     * Register the application services.
+     */
+    public function register()
+    {
+        app()->singleton(':package_name', function () {
+            return new :PackageName();
+        });
+
+        // $this->mergeConfigFrom(__DIR__.'/../config/config.php', ':package_name');
+    }
+    
+    /**
      * Bootstrap the application services.
      */
     public function boot()
@@ -24,16 +36,7 @@ class :PackageNameServiceProvider extends ServiceProvider
             ], 'views');
 
             $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
-
             */
         }
-    }
-
-    /**
-     * Register the application services.
-     */
-    public function register()
-    {
-        // $this->mergeConfigFrom(__DIR__.'/../config/config.php', ':package_name');
     }
 }
