@@ -63,7 +63,7 @@ find . -type f -exec sed -i '' -e "s/:package_description/$package_description/"
 # !: exclude files
 find . -type f ! -name '*.sh' -exec sed -i '' -e "s/Skeleton/$package_namespace/g" {} \;
 
-sed -i '' -e "/^\*\*Note:\*\* Replace/d" README.md
+sed -i '' -e "/^\*\*Note:\*\* Replace/d" readme.md
 
 echo "Replaced all values and reset git directory, self destructing in 3... 2... 1..."
 
@@ -71,5 +71,6 @@ echo "Replaced all values and reset git directory, self destructing in 3... 2...
 rm -- "$0"
 
 mv src/SkeletonServiceProvider.php src/"${package_namespace}ServiceProvider.php"
-mv src/SkeletonClass.php src/"${package_namespace}Class.php"
-mv src/SkeletonFacade.php src/"${package_namespace}Facade.php"
+mv src/Skeleton.php src/"${package_namespace}.php"
+mv src/SkeletonController.php src/"${package_namespace}Controller.php"
+mv src/Facade/Skeleton.php src/Facade/"${package_namespace}.php"

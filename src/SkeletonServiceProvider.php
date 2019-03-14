@@ -31,7 +31,7 @@ class :PackageNameServiceProvider extends ServiceProvider
         // $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
         // $this->loadRoutesFrom(__DIR__.'/web.php');
         // $this->publishes([
-        //     __DIR__.'/path/to/views' => resource_path('views/vendor/courier'),
+            // __DIR__.'/../config/:package_name.php' => config_path(':package_name.php'),
         // Blade::directive('some', function () {
         //     return '<style>'. $this->app->make('some')->styles() .'</style>';
         // });
