@@ -1,4 +1,6 @@
-cd a_package && ./configure-skeleton.sh
+cd a_package
+./configure-skeleton.sh
+composer install
 
 Inside Laravel 
         "psr-4": {
