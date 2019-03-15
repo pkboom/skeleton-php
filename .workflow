@@ -1,14 +1,4 @@
-cd a_package
-./configure-skeleton.sh
-composer install
-
-Inside Laravel 
-        "psr-4": {
-            "Pkboom\\:PackageName\\": "a_package/src/",
-            "App\\": "app/"
-        }
-
-        Pkboom\:PackageName\:PackageNameServiceProvider::class,
+cd a_package && ./configure-skeleton.sh
 
 composer install
 cp phpunit.xml.dist phpunit.xml
@@ -22,23 +12,18 @@ fix namespaces if necessary
 
 run tests from laravel application, not from package
 
-delete namespace from laravel-application composer.json
-"Pkboom\\{package_namespace}\\": "a_package/src/",
-
-delete from config/app.php 
-Pkboom\Calm\{{Your package}}ServiceProvider::class,
-
 delete phpunit.xml
-delete a_package
 
 composer-link ../packages/{package}
 
 composer require pkboom/{package}
 
+delete a_package
+
 when deleting a_package, it will only delete link
 when deleting files, it will actually files in the package folder
 
-git remote remove origin
+git push
 
 from package
 git remote add origin git@github.com:pkboom/{{your-package}}
