@@ -44,7 +44,7 @@
                 "Pkboom\\Skeleton\\SkeletonServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Pkboom\\Skeleton\\SkeletonFacade"
+                "Skeleton": "Pkboom\\Skeleton\\Facade\\Skeleton"
             }
         }
     }
