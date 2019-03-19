@@ -4,11 +4,11 @@ composer install
 cp phpunit.xml.dist phpunit.xml
 cd .. && composer dump-autoload
 
-set up package service provider
-
 move files
 
 fix namespaces if necessary
+
+set up package service provider
 
 run tests from laravel application, not from package
 
