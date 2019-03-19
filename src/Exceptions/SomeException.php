@@ -4,7 +4,7 @@ namespace Pkboom\:PackageName\Exceptions;
 
 use Exception;
 
-class SomeException extends Exception
+class :PackageNameException extends Exception
 {
     //
 }
