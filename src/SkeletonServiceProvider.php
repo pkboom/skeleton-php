@@ -6,9 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class :PackageNameServiceProvider extends ServiceProvider
 {
-    /**
-     * Register the application services.
-     */
     public function register()
     {
         app()->singleton(':package_name', function () {
@@ -18,9 +15,6 @@ class :PackageNameServiceProvider extends ServiceProvider
         // $this->mergeConfigFrom(__DIR__.'/../config/config.php', ':package_name');
     }
     
-    /**
-     * Bootstrap the application services.
-     */
     public function boot()
     {
         // if ($this->app->runningInConsole()) {
