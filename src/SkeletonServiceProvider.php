@@ -23,7 +23,7 @@ class :PackageNameServiceProvider extends ServiceProvider
         //     ]);
         // }
         // $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
-        // $this->loadRoutesFrom(__DIR__.'/web.php');
+        // $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         // $this->publishes([
             // __DIR__.'/../config/:package_name.php' => config_path(':package_name.php'),
         // ]);
