@@ -14,6 +14,8 @@ run tests from laravel application, not from package
 
 delete phpunit.xml
 
+clean up composer.json
+
 composer-link ../packages/{package}
 
 composer require pkboom/{package}
