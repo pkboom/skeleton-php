@@ -3,7 +3,7 @@
 namespace Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Pkboom\ModelImages\:PackageNameServiceProvider;
+use Pkboom\:PackageName\:PackageNameServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
