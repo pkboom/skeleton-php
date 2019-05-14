@@ -19,12 +19,7 @@ composer-link ../packages/{package}
 
 composer require pkboom/{package}
 
-delete a_package
-
-when deleting a_package, it will only delete link
-when deleting files, it will actually files in the package folder
-
-git push
+test
 
 from package
 git remote add origin git@github.com:pkboom/{{your-package}}
@@ -32,4 +27,9 @@ wip
 git push -u origin master -f
 
 create README.md
+
+delete a_package
+
+when deleting a_package, it will only delete link
+when deleting files, it will actually files in the package folder
 
