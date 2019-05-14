@@ -1,7 +1,6 @@
 cd a_package && ./configure-skeleton.sh
 
 composer install
-cp phpunit.xml.dist phpunit.xml
 cd .. && composer dump-autoload
 
 move files
