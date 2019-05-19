@@ -1,7 +1,8 @@
 <?php
 
 namespace Pkboom\:PackageName;
+use Illuminate\Routing\Controller;
 
-class :PackageNameController
+class :PackageNameController extends Controller
 {
 }
