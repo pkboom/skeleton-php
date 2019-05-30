@@ -15,8 +15,6 @@ set up package service provider
 
 run tests from laravel application, not from package
 
-delete phpunit.xml
-
 clean up composer.json
 
 composer-link ../packages/{package}
