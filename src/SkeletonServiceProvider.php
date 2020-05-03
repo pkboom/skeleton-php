@@ -2,9 +2,10 @@
 
 namespace Pkboom\:PackageName;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class :PackageNameServiceProvider extends ServiceProvider
+class :PackageNameServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     public function register()
     {
@@ -30,5 +31,10 @@ class :PackageNameServiceProvider extends ServiceProvider
         // Blade::directive('some', function () {
         //     return '<style>'. $this->app->make('some')->styles() .'</style>';
         // });
+    }
+
+    public function provides()
+    {
+        // return [':package_name'];
     }
 }
