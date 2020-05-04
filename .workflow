@@ -11,11 +11,11 @@ move files
 
 fix namespaces if necessary
 
-set up package service provider
-
-run tests from laravel application, not from package
+set up package service provider(migrations, views)
 
 clean up composer.json
+
+move to laravel application root, not package
 
 composer-link ../packages/{package}
 
