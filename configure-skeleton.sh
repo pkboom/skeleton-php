@@ -70,6 +70,7 @@ echo "Replaced all values and reset git directory, self destructing in 3... 2...
 # -- => end of command options, after --, it is usually file names.
 rm -- "$0"
 
+mv config/skeleton.php config/"${package_namespace}.php"
 mv src/SkeletonServiceProvider.php src/"${package_namespace}ServiceProvider.php"
 mv src/Skeleton.php src/"${package_namespace}.php"
 mv src/SkeletonController.php src/"${package_namespace}Controller.php"
