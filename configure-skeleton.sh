@@ -18,6 +18,12 @@ author_username=${author_username:-$username_guess}
 
 current_directory=`pwd -P`
 current_directory=`basename $current_directory`
+# <<<: https://unix.stackexchange.com/questions/76402/command-line-instead-of
+# make first letter uppercase
+current_directory=$(tr "[:lower:]" "[:upper:]" <<< ${current_directory:0:1})${current_directory:1}
+# \u: turn the next character to uppercase
+# http://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command
+current_directory=$(echo $current_directory | sed -r 's/([a-z0-9])-([a-z0-9])/\1\u\2/g')
 read -p "Package name ($current_directory): " package_name
 package_name=${package_name:-$current_directory}
 
