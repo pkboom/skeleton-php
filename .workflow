@@ -24,7 +24,7 @@ composer require pkboom/{package}
 
 test
 
-from package
+cd a_package
 wip
 git remote add origin git@github.com:pkboom/{{your-package}}
 git push -u origin master -f
