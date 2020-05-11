@@ -25,8 +25,8 @@ composer require pkboom/{package}
 test
 
 from package
-git remote add origin git@github.com:pkboom/{{your-package}}
 wip
+git remote add origin git@github.com:pkboom/{{your-package}}
 git push -u origin master -f
 
 create README.md
