@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.com/pkboom/laravel-calm.svg?branch=master)](https://travis-ci.com/pkboom/laravel-calm)
 
 This is where your description should go. Try and limit it to a paragraph or two.
+<img src="/images/demo.png" width="800"  title="demo">
 
 ## Installation
 
@@ -15,7 +16,7 @@ composer require pkboom/:package_name
 
 ## Usage
 
-``` php
+```php
 $skeleton = new pkboom\Skeleton();
 echo $skeleton->echoPhrase('Hello, pkboom!');
 ```
@@ -24,7 +25,7 @@ echo $skeleton->echoPhrase('Hello, pkboom!');
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
