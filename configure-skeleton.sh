@@ -13,8 +13,8 @@ author_email=${author_email:-$git_email}
 # replace all blanks to ''
 # blank => [:blank:]
 # username_guess=${author_name//[[:blank:]]/}
-read -p "Author username (pkboom): " author_username
-author_username=${author_username:-$username_guess}
+# read -p "Author username (pkboom): " author_username
+# author_username=${author_username:-$username_guess}
 
 current_directory=`pwd -P`
 current_directory=`basename $current_directory`
@@ -41,8 +41,8 @@ package_namespace=${package_namespace:-$current_directory}
 read -p "Package description: " package_description
 
 echo
-echo -e "Author: $author_name ($author_username, $author_email)"
-echo -e "Package: $package_name <$package_description>"
+echo -e "Author: $author_name ($author_email)"
+echo -e "Package: $package_name"
 
 echo
 echo "This script will replace the above values in all files in the project directory and reset the git repository."
@@ -68,7 +68,6 @@ echo
 # e: combine multiple commands
 # {}: filenames from find
 find . -type f -exec sed -i '' -e "s/:author_name/$author_name/" {} \;
-find . -type f -exec sed -i '' -e "s/:author_username/$author_username/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_email/$author_email/" {} \;
 # without /g, it will only replace one time in a line.
 find . -type f -exec sed -i '' -e "s/:package_name/$package_name/g" {} \;
