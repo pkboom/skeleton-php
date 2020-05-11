@@ -3,7 +3,7 @@ cd a_package && ./configure-skeleton.sh
 composer install
 cd .. && composer dump-autoload
 
-if you need
+if needed
 cd a_package
 composer require orchestra/testbench
 
@@ -16,6 +16,7 @@ set up package service provider(migrations, views)
 clean up composer.json
 
 move to laravel application root, not package
+cd ..
 
 composer-link ../packages/{package}
 

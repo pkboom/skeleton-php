@@ -10,27 +10,35 @@ author_name=${author_name:-$git_name} # $git_name => default
 read -p "Author email ($git_email): " author_email
 author_email=${author_email:-$git_email}
 
-# replace all => blanks to ''
+# replace all blanks to ''
 # blank => [:blank:]
-username_guess=${author_name//[[:blank:]]/}
-read -p "Author username ($username_guess): " author_username
+# username_guess=${author_name//[[:blank:]]/}
+read -p "Author username (pkboom): " author_username
 author_username=${author_username:-$username_guess}
 
 current_directory=`pwd -P`
 current_directory=`basename $current_directory`
-# <<<: https://unix.stackexchange.com/questions/76402/command-line-instead-of
-# make first letter uppercase
-current_directory=$(tr "[:lower:]" "[:upper:]" <<< ${current_directory:0:1})${current_directory:1}
-# \u: turn the next character to uppercase
-# http://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command
-current_directory=$(echo $current_directory | sed -r 's/([a-z0-9])-([a-z0-9])/\1\u\2/g')
+
 read -p "Package name ($current_directory): " package_name
 package_name=${package_name:-$current_directory}
 
 read -p "Package description: " package_description
 
-read -p "Package namespace ($package_name): " package_namespace
-package_namespace=${package_namespace:-$package_name}
+# <<<: https://unix.stackexchange.com/questions/76402/command-line-instead-of
+# make first letter uppercase
+current_directory=$(tr "[:lower:]" "[:upper:]" <<< ${current_directory:0:1})${current_directory:1}
+
+# \u: turn the next character to uppercase
+# http://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command
+# -r: use regex
+current_directory=$(echo $current_directory | sed -r 's/([a-z0-9])-([a-z0-9])/\1\u\2/g')
+
+# remove Laravel from namespace
+current_directory=$(echo $current_directory | sed s/Laravel// )
+read -p "Package namespace ($current_directory): " package_namespace
+package_namespace=${package_namespace:-$current_directory}
+
+read -p "Package description: " package_description
 
 echo
 echo -e "Author: $author_name ($author_username, $author_email)"
@@ -82,3 +90,4 @@ mv src/Skeleton.php src/"${package_namespace}.php"
 mv src/SkeletonController.php src/"${package_namespace}Controller.php"
 mv src/Facade/Skeleton.php src/Facade/"${package_namespace}.php"
 mv src/Middleware/Skeleton.php src/Middleware/"${package_namespace}.php"
+mv src/Commands/Skeleton.php src/Commands/"${package_namespace}Command.php"
