@@ -18,9 +18,11 @@ clean up composer.json
 move to laravel application root, not package
 cd ..
 
-composer-link ../packages/{package}
+composer-link {package_name}
+composer-link :package_name
 
-composer require pkboom/{package}
+composer require pkboom/{package_name}
+composer require pkboom/:package_name
 
 test
 
@@ -32,7 +34,7 @@ git push -u origin master -f
 create README.md
 
 delete a_package
-
+delete .workflow
 deleting a_package will only a link
 deleting files will delete files in the package folder
 
