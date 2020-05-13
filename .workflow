@@ -33,6 +33,6 @@ create README.md
 
 delete a_package
 
-when deleting a_package, it will only delete link
-when deleting files, it will actually files in the package folder
+deleting a_package will only a link
+deleting files will delete files in the package folder
 
