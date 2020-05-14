@@ -15,16 +15,11 @@ set up package service provider(migrations, views)
 
 clean up composer.json
 
-move to laravel application root, not package
 cd ..
-
-composer-link {package_name}
 composer-link :package_name
-
-composer require pkboom/{package_name}
 composer require pkboom/:package_name
 
-test
+test if the new package works.
 
 cd a_package
 wip
