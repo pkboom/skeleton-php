@@ -9,34 +9,34 @@ class :PackageNameServiceProvider extends ServiceProvider implements DeferrableP
 {
     public function register()
     {
-        // app()->singleton(':config-name', function () {
-        //     return new :PackageName();
-        // });
+        app()->singleton(':config-name', function () {
+            return new :PackageName();
+        });
 
-        // $this->mergeConfigFrom(__DIR__.'/../config/:config-name.php', ':config-name');
+        $this->mergeConfigFrom(__DIR__.'/../config/:config-name.php', ':config-name');
     }
     
     public function boot()
     {
-        // $this->publishes([
-            // __DIR__.'/../config/:config-name.php' => config_path(':config-name.php'),
-        // ]); 
+        $this->publishes([
+            __DIR__.'/../config/:config-name.php' => config_path(':config-name.php'),
+        ]); 
 
-        // $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
+        $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
 
-        // $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
      
-        // if ($this->app->runningInConsole()) {
-        //     $this->commands([
-        //         FooCommand::class,
-        //     ]);
-        // }  
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                FooCommand::class,
+            ]);
+        }  
     }
 
     public function provides()
     {
-        return [':package_name'];
+        return [':config-name'];
     }
 }
