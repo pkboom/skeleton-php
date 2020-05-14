@@ -24,13 +24,18 @@ package_name=${package_name:-$current_directory}
 
 read -p "Package description: " package_description
 
+# laravel-sample => sample
+config_name=$(echo $current_directory | sed s/laravel-// )
+
 # <<<: https://unix.stackexchange.com/questions/76402/command-line-instead-of
 # make first letter uppercase
+# laravel-sample => Laravel-sample
 current_directory=$(tr "[:lower:]" "[:upper:]" <<< ${current_directory:0:1})${current_directory:1}
 
 # \u: turn the next character to uppercase
 # http://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command
 # -r: use regex
+# laravel-sample => Laravel-Sample
 current_directory=$(echo $current_directory | sed -r 's/([a-z0-9])-([a-z0-9])/\1\u\2/g')
 
 # remove Laravel from namespace
@@ -83,7 +88,7 @@ echo "Replaced all values and reset git directory, self destructing in 3... 2...
 # -- => end of command options, after --, it is usually file names.
 rm -- "$0"
 
-mv config/skeleton.php config/"${package_namespace}.php"
+mv config/skeleton.php config/"${config_name}.php"
 mv src/SkeletonServiceProvider.php src/"${package_namespace}ServiceProvider.php"
 mv src/Skeleton.php src/"${package_namespace}.php"
 mv src/SkeletonController.php src/"${package_namespace}Controller.php"
