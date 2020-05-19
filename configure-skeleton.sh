@@ -22,8 +22,6 @@ current_directory=`basename $current_directory`
 read -p "Package name ($current_directory): " package_name
 package_name=${package_name:-$current_directory}
 
-read -p "Package description: " package_description
-
 # laravel-sample => sample
 config_name=$(echo $current_directory | sed s/laravel-// )
 
