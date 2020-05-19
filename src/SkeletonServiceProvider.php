@@ -9,17 +9,17 @@ class :PackageNameServiceProvider extends ServiceProvider implements DeferrableP
 {
     public function register()
     {
-        app()->singleton(':config-name', function () {
+        app()->singleton(':config_name', function () {
             return new :PackageName();
         });
 
-        $this->mergeConfigFrom(__DIR__.'/../config/:config-name.php', ':config-name');
+        $this->mergeConfigFrom(__DIR__.'/../config/:config_name.php', ':config_name');
     }
     
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/:config-name.php' => config_path(':config-name.php'),
+            __DIR__.'/../config/:config_name.php' => config_path(':config_name.php'),
         ]); 
 
         $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
@@ -37,6 +37,6 @@ class :PackageNameServiceProvider extends ServiceProvider implements DeferrableP
 
     public function provides()
     {
-        return [':config-name'];
+        return [':config_name'];
     }
 }

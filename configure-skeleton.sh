@@ -20,9 +20,9 @@ current_directory=`pwd -P`
 current_directory=`basename $current_directory`
 
 read -p "Package name ($current_directory): " package_name
-package_name=${package_name:-$current_directory}
+package_name=${package_name:-$current_directory} # laravel-package-name
 
-# laravel-sample => sample
+# laravel-package-name => package-name
 config_name=$(echo $current_directory | sed s/laravel-// )
 
 # <<<: https://unix.stackexchange.com/questions/76402/command-line-instead-of
@@ -73,7 +73,7 @@ echo
 find . -type f -exec sed -i '' -e "s/:author_name/$author_name/" {} \;
 find . -type f -exec sed -i '' -e "s/:author_email/$author_email/" {} \;
 # without /g, it will only replace one time in a line.
-find . -type f -exec sed -i '' -e "s/:config-name/$config_name/g" {} \;
+find . -type f -exec sed -i '' -e "s/:config_name/$config_name/g" {} \;
 find . -type f -exec sed -i '' -e "s/:package_name/$package_name/g" {} \;
 find . -type f -exec sed -i '' -e "s/:PackageName/$package_namespace/g" {} \;
 find . -type f -exec sed -i '' -e "s/:package_description/$package_description/" {} \;

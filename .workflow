@@ -13,6 +13,8 @@ fix namespaces if necessary
 
 set up package service provider(migrations, views)
 
+import packages
+
 clean up composer.json
 
 cd ..
