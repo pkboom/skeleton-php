@@ -30,7 +30,7 @@ class :PackageNameServiceProvider extends ServiceProvider implements DeferrableP
      
         if ($this->app->runningInConsole()) {
             $this->commands([
-                :PackageName::class,
+                :PackageNameCommand::class,
             ]);
         }  
     }
