@@ -4,7 +4,7 @@ namespace Pkboom\:PackageName\Commands;
 
 use Illuminate\Console\Command;
 
-class RouteHistoryCommand extends Command
+class :PackageNameCommand extends Command
 {
     protected $signature = '';
 
