@@ -3,10 +3,6 @@ cd a_package && ./configure-skeleton.sh
 composer install
 cd .. && composer dump-autoload
 
-if needed
-cd a_package
-composer require orchestra/testbench
-
 move files
 
 fix namespaces if necessary
