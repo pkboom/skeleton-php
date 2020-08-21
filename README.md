@@ -28,7 +28,3 @@ echo $skeleton->echoPhrase('Hello, pkboom!');
 ```bash
 composer test
 ```
-
-## License
-
-The MIT License (MIT). Please see [MIT license](http://opensource.org/licenses/MIT) for more information.
