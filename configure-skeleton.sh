@@ -34,14 +34,12 @@ current_directory=$(tr "[:lower:]" "[:upper:]" <<< ${current_directory:0:1})${cu
 # http://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command
 # -r: use regex
 # laravel-sample => Laravel-Sample
-current_directory=$(echo $current_directory | sed -r 's/([a-z0-9])-([a-z0-9])/\1\u\2/g')
+current_directory=$current_directory
 
 # remove Laravel from namespace
 current_directory=$(echo $current_directory | sed s/Laravel// )
 read -p "Package namespace ($current_directory): " package_namespace
 package_namespace=${package_namespace:-$current_directory}
-
-read -p "Package description: " package_description
 
 echo
 echo -e "Author: $author_name ($author_email)"
